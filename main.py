@@ -4,12 +4,26 @@ metros_quadrados = float(metros_quadrados)
 
 
 # Coloque o código para resolver o problema nessa parte do programa
-litros = 54
+cobertura_da_tinta = 3
+litros_lata = 18 
+valor_da_tinta = 80 
+cobertura_da_lata = int(cobertura_da_tinta * litros_lata)
+litros_necessarios = metros_quadrados/cobertura_da_tinta
+if litros_necessarios <=18:
+    qtd_de_latas = 1 
+else:   
+   qtd_de_latas = int(litros_necessarios/litros_lata)
+   if litros_necessarios % litros_lata !=0:
+    qtd_de_latas += 1 
+
+    
+
+
 
 
 # As duas variáveis qtd_de_latas e valor_total devem guardar a resposta do problema
 # Troque os zeros pelos valores corretos.
-qtd_de_latas = int(metros_quadrados/litros + 1 )
+
 valor_total = qtd_de_latas * 80
 
 
